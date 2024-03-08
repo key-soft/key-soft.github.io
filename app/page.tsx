@@ -10,24 +10,35 @@ export default function Home() {
 	return (
 		<section className="flex flex-col items-center justify-center gap-4 py-8 md:py-10">
 			<div className="inline-block max-w-lg text-center justify-center">
-				<h1 className={title()}>Make&nbsp;</h1>
-				<h1 className={title({ color: "violet" })}>beautiful&nbsp;</h1>
+				<h1 className={title()}>Unfortunately,&nbsp;</h1>
+				<h1 className={title({ color: "violet" })}>this&nbsp;</h1>
 				<br />
 				<h1 className={title()}>
-					websites regardless of your design experience.
+					webpage is undergoing maintenance.
 				</h1>
 				<h2 className={subtitle({ class: "mt-4" })}>
-					Beautiful, fast and modern React UI library.
+					The site layout may change over time.
 				</h2>
 			</div>
 
 			<div className="flex gap-3">
-				<Link
-					isExternal
-					href={siteConfig.links.docs}
-					className={buttonStyles({ color: "primary", radius: "full", variant: "shadow" })}
+			<Link
+					className={buttonStyles({ variant: "flat", radius: "full" })}
+					href={siteConfig.navItems[1].href}
 				>
-					Documentation
+						{siteConfig.navItems[1].label}
+				</Link>
+				<Link
+					className={buttonStyles({ variant: "flat", radius: "full" })}
+					href={siteConfig.navItems[3].href}
+				>
+					{siteConfig.navItems[3].label}
+				</Link>
+				<Link
+					className={buttonStyles({ variant: "flat", radius: "full" })}
+					href={siteConfig.navItems[2].href}
+				>
+					{siteConfig.navItems[2].label}
 				</Link>
 				<Link
 					isExternal
